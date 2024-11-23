@@ -1,0 +1,79 @@
+.hidden {
+    display: none;
+}
+
+h1, h3 {
+    color:#400040;
+}
+
+#data {
+    display: inline;
+    text-align: left;
+    /* apply some space around our data area, and add a border */
+}
+
+/* Example: make all controls 150px wide */
+input, textarea, select, button {
+    width : 150px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+label {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+    color:brown;
+}
+
+label+textarea {
+    display: inline-block;
+    width: 200px;
+    text-align: left;
+    vertical-align: top;
+    color:brown;
+}
+
+/* Style submit input controls */
+button, input[type="submit"], input[type="reset"] {
+    border: 2px solid #ccc;
+    width:100px;
+    margin-bottom:2em;
+}
+
+/* Style all <input> elements that are direct siblings of a <label> */
+label+input {
+    text-align: left;
+    color: blue;
+}
+
+label+p {
+    text-align: left;
+    color: blue;
+}
+
+form {
+    /* apply some space around our form, and add a border */
+    margin-top: 3em;
+    padding: 2em;
+    border: 1px solid black;
+  
+    /* set a max-width, so it doesn't expand with the window, using the rest as margin */
+    max-width: 800px;
+    min-width: 400px;
+    background-color: lightblue;
+}
+
+p {
+    display: inline-block;
+    margin: 0;
+    max-width: 800px;
+    min-width: 400px;
+    color: darkgreen;
+    background-color: lightgray;
+}
+
+.error {
+    color: red;
+    font-size: 1.5em;
+}

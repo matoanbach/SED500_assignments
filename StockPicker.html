@@ -1,0 +1,69 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <title>
+        Stock Picker
+    </title>
+    </head>
+    <body>
+    <form id="stock-picker" action="#" class="">
+    <h1>Stock Search</h1>
+    
+    <label for="symbol">Company Symbol:</label>
+    <input type="text" name="symbol" id="symbol" required="">
+    <br><br>
+    
+    <label for="category">Category:</label>
+    <select id="category" name="category" onclick="SetVisibility()">
+        <option value="income-statement" selected="">Income Statement</option>
+        <option value="balance-sheet-statement">Balance Sheet Statement</option>
+        <option value="cash-flow-statement">Cash Flow Statement</option>
+        <option value="income-statement-as-reported">Financial Statements as Reported on SEC</option>
+        <option value="ratios">Financial Ratios</option>
+        <option value="key-metrics">Key Metrics</option>
+        <option value="enterprise-values">Enterprise Value</option>
+        <option value="financial-growth">Financial Statements Growth</option>
+        <option value="discounted-cash-flow">Discounted Cash Flow Value</option>
+        <option value="rating">Rating</option>
+        <option value="market-capitalization">Market Capitalization</option>
+        <option value="stock-screener">Stock screener</option><!--Should display extra inputs-->
+        <option value="quote">Real-time quote</option>
+        <option value="search">Ticker search</option>
+        <option value="profile">Company Profile</option>
+        <option value="daily-dividend">Daily Stock Dividend</option>
+    </select><br><br>
+    
+    <label for="stock-screener" class="hidden screener">Stock Screener:</label>
+    <select id="stock-screener" name="stock_screener" class="hidden screener">
+        <option value="marketCapMoreThan">Market Capitalization, more than</option>
+        <option value="marketCapLowerThan">Market Capitalization, less than</option>
+        <option value="betaMoreThan">Beta, more than</option>
+        <option value="betaLessThan">Beta, less than</option>
+        <option value="dividendMoreThan" selected="">Dividend Yield, more than</option>
+        <option value="dividendLessThan">Dividend Yield, less than</option>
+        <option value="volumeMoreThan">Average Volume, more than</option>
+        <option value="volumeLessThan">Average Volume, less than</option>
+    </select><br class="hidden screener"><br class="hidden screener">
+    
+    <label for="stock-screener-value" class="hidden screener">Value :</label>
+    <input type="number" name="stock_screener_value" id="stock-screener-value" class="hidden screener">
+    <br class="hidden screener"><br class="hidden screener">
+    
+    <label for="stock-screener-exchange" class="hidden screener">Exchange:</label>
+    <select id="stock-screener-exchange" name="stock_screener_exchange" class="hidden screener">
+        <option value="exchange-all">All</option>
+        <option value="exchange-tsx">TSX</option>
+    </select><br class="hidden screener"><br class="hidden screener">
+    
+    <input id="submit" type="submit" value="Submit Query">&nbsp;&nbsp;
+    <input id="reset" type="reset" value="Reset">
+    <div id="error" class="error"></div>
+    </form>
+    <br>
+    <div id="data"></div>
+    <canvas id="myChart" class="hidden screener"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="StockPicker.js"></script>
+    
+    
+    </body></html>
